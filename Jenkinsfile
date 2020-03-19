@@ -18,8 +18,8 @@ parallel (
         		
         	stage('[' + LABEL + '] Preparation') {
         		deleteDir()
-        		dir('sap-pipeline') {
-        			bat "git clone " + PIPELINE_GITURL + " ."
+        		cd('sap-pipeline') {
+        			sh "git clone " + PIPELINE_GITURL + " ."
         		}
         	}
         	
